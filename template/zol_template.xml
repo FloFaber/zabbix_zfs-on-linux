@@ -2150,7 +2150,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             <type>7</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>vfs.file.contents[/proc/spl/kstat/zfs/{#POOLNAME}/io]</key>
+                            <key>vfs.file.contents[/proc/spl/kstat/zfs/{#POOLNAME}/iostats]</key>
                             <delay>1m</delay>
                             <history>0</history>
                             <trends>0</trends>
@@ -2474,7 +2474,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             <verify_host>0</verify_host>
                             <application_prototypes/>
                             <master_item>
-                                <key>vfs.file.contents[/proc/spl/kstat/zfs/{#POOLNAME}/io]</key>
+                                <key>vfs.file.contents[/proc/spl/kstat/zfs/{#POOLNAME}/iostats]</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
@@ -2548,7 +2548,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             <verify_host>0</verify_host>
                             <application_prototypes/>
                             <master_item>
-                                <key>vfs.file.contents[/proc/spl/kstat/zfs/{#POOLNAME}/io]</key>
+                                <key>vfs.file.contents[/proc/spl/kstat/zfs/{#POOLNAME}/iostats]</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
@@ -2622,7 +2622,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             <verify_host>0</verify_host>
                             <application_prototypes/>
                             <master_item>
-                                <key>vfs.file.contents[/proc/spl/kstat/zfs/{#POOLNAME}/io]</key>
+                                <key>vfs.file.contents[/proc/spl/kstat/zfs/{#POOLNAME}/iostats]</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
@@ -2696,7 +2696,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             <verify_host>0</verify_host>
                             <application_prototypes/>
                             <master_item>
-                                <key>vfs.file.contents[/proc/spl/kstat/zfs/{#POOLNAME}/io]</key>
+                                <key>vfs.file.contents[/proc/spl/kstat/zfs/{#POOLNAME}/iostats]</key>
                             </master_item>
                         </item_prototype>
                         <item_prototype>
