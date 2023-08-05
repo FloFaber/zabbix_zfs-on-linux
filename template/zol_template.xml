@@ -97,7 +97,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS ARC stat &quot;$1&quot;</name>
+                    <name>ZFS ARC stat arc_dnode_limit</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -159,7 +159,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS ARC stat &quot;$1&quot;</name>
+                    <name>ZFS ARC stat arc_meta_limit</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -221,7 +221,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS ARC stat &quot;$1&quot;</name>
+                    <name>ZFS ARC stat arc_meta_used</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -283,7 +283,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS ARC stat &quot;$1&quot;</name>
+                    <name>ZFS ARC stat bonus_size</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -469,7 +469,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS ARC stat &quot;$1&quot;</name>
+                    <name>ZFS ARC stat data_size</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -531,7 +531,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS ARC stat &quot;$1&quot;</name>
+                    <name>ZFS ARC stat dbuf_size</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -593,7 +593,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS ARC stat &quot;$1&quot;</name>
+                    <name>ZFS ARC stat dnode_size</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -655,7 +655,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS ARC stat &quot;$1&quot;</name>
+                    <name>ZFS ARC stat hdr_size</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -717,7 +717,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS ARC stat &quot;$1&quot;</name>
+                    <name>ZFS ARC stat hits</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -784,7 +784,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS ARC stat &quot;$1&quot;</name>
+                    <name>ZFS ARC stat metadata_size</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -846,7 +846,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS ARC stat &quot;$1&quot;</name>
+                    <name>ZFS ARC stat mfu_hits</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -913,7 +913,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS ARC stat &quot;$1&quot;</name>
+                    <name>ZFS ARC stat mfu_size</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -975,7 +975,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS ARC stat &quot;$1&quot;</name>
+                    <name>ZFS ARC stat misses</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -1042,7 +1042,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS ARC stat &quot;$1&quot;</name>
+                    <name>ZFS ARC stat mru_hits</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -1109,7 +1109,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS ARC stat &quot;$1&quot;</name>
+                    <name>ZFS ARC stat mru_size</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -1357,7 +1357,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS parameter $1</name>
+                    <name>ZFS parameter zfs_arc_dnode_limit_percent</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -1419,7 +1419,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <master_item/>
                 </item>
                 <item>
-                    <name>ZFS parameter $1</name>
+                    <name>ZFS parameter zfs_arc_meta_limit_percent</name>
                     <type>7</type>
                     <snmp_community/>
                     <snmp_oid/>
@@ -1515,7 +1515,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                     <description>Discover ZFS dataset.</description>
                     <item_prototypes>
                         <item_prototype>
-                            <name>Zfs dataset $1 compressratio</name>
+                            <name>Zfs dataset {#FILESETNAME} compressratio</name>
                             <type>7</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -1583,7 +1583,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             <master_item/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Zfs dataset $1 $2</name>
+                            <name>Zfs dataset {#FILESETNAME} available</name>
                             <type>7</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -1646,7 +1646,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             <master_item/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Zfs dataset $1 $2</name>
+                            <name>Zfs dataset {#FILESETNAME} referenced</name>
                             <type>7</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -1709,7 +1709,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             <master_item/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Zfs dataset $1 $2</name>
+                            <name>Zfs dataset {#FILESETNAME} usedbychildren</name>
                             <type>7</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -1772,7 +1772,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             <master_item/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Zfs dataset $1 $2</name>
+                            <name>Zfs dataset {#FILESETNAME} usedbydataset</name>
                             <type>7</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -1835,7 +1835,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             <master_item/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Zfs dataset $1 $2</name>
+                            <name>Zfs dataset {#FILESETNAME} usedbysnapshots</name>
                             <type>7</type>
                             <snmp_community/>
                             <snmp_oid/>
@@ -1898,7 +1898,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             <master_item/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Zfs dataset $1 $2</name>
+                            <name>Zfs dataset {#FILESETNAME} used</name>
                             <type>7</type>
                             <snmp_community/>
                             <snmp_oid/>
