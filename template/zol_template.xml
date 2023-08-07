@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>6.0</version>
-    <date>2023-08-07T15:40:04Z</date>
+    <date>2023-08-07T15:49:28Z</date>
     <groups>
         <group>
             <uuid>7df96b18c230490a9a0a9e2307226338</uuid>
@@ -755,34 +755,6 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             </tags>
                         </item_prototype>
                         <item_prototype>
-                            <uuid>5bb6b079ec63416c8fbd3c9bfa9e06da</uuid>
-                            <name>Zpool {#POOLNAME}: Get zpool iostats</name>
-                            <type>ZABBIX_ACTIVE</type>
-                            <key>zfs.pool.iostats[{#POOLNAME}]</key>
-                            <history>0</history>
-                            <trends>0</trends>
-                            <value_type>TEXT</value_type>
-                            <preprocessing>
-                                <step>
-                                    <type>REGEX</type>
-                                    <parameters>
-                                        <parameter>(\w+)\s+([0-9]+)\s+([0-9]+)\s+([0-9]+)\s+([0-9]+)\s+([0-9]+)\s+([0-9]+).*$</parameter>
-                                        <parameter>[&quot;\4&quot;, &quot;\5&quot;, &quot;\6&quot;, &quot;\7&quot;]</parameter>
-                                    </parameters>
-                                </step>
-                            </preprocessing>
-                            <tags>
-                                <tag>
-                                    <tag>Application</tag>
-                                    <value>ZFS</value>
-                                </tag>
-                                <tag>
-                                    <tag>Application</tag>
-                                    <value>ZFS zpool</value>
-                                </tag>
-                            </tags>
-                        </item_prototype>
-                        <item_prototype>
                             <uuid>472e21c79759476984cbf4ce9f12580a</uuid>
                             <name>Zpool {#POOLNAME} Health</name>
                             <type>ZABBIX_ACTIVE</type>
@@ -834,7 +806,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                                 </step>
                             </preprocessing>
                             <master_item>
-                                <key>zfs.pool.iostats[{#POOLNAME}]</key>
+                                <key>zfs.zpool.iostats[{#POOLNAME}]</key>
                             </master_item>
                             <tags>
                                 <tag>
@@ -871,7 +843,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                                 </step>
                             </preprocessing>
                             <master_item>
-                                <key>zfs.pool.iostats[{#POOLNAME}]</key>
+                                <key>zfs.zpool.iostats[{#POOLNAME}]</key>
                             </master_item>
                             <tags>
                                 <tag>
@@ -908,7 +880,7 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                                 </step>
                             </preprocessing>
                             <master_item>
-                                <key>zfs.pool.iostats[{#POOLNAME}]</key>
+                                <key>zfs.zpool.iostats[{#POOLNAME}]</key>
                             </master_item>
                             <tags>
                                 <tag>
@@ -945,8 +917,36 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                                 </step>
                             </preprocessing>
                             <master_item>
-                                <key>zfs.pool.iostats[{#POOLNAME}]</key>
+                                <key>zfs.zpool.iostats[{#POOLNAME}]</key>
                             </master_item>
+                            <tags>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>ZFS</value>
+                                </tag>
+                                <tag>
+                                    <tag>Application</tag>
+                                    <value>ZFS zpool</value>
+                                </tag>
+                            </tags>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>5bb6b079ec63416c8fbd3c9bfa9e06da</uuid>
+                            <name>Zpool {#POOLNAME}: Get zpool iostats</name>
+                            <type>ZABBIX_ACTIVE</type>
+                            <key>zfs.zpool.iostats[{#POOLNAME}]</key>
+                            <history>0</history>
+                            <trends>0</trends>
+                            <value_type>TEXT</value_type>
+                            <preprocessing>
+                                <step>
+                                    <type>REGEX</type>
+                                    <parameters>
+                                        <parameter>(\w+)\s+([0-9]+)\s+([0-9]+)\s+([0-9]+)\s+([0-9]+)\s+([0-9]+)\s+([0-9]+).*$</parameter>
+                                        <parameter>[&quot;\4&quot;, &quot;\5&quot;, &quot;\6&quot;, &quot;\7&quot;]</parameter>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
                             <tags>
                                 <tag>
                                     <tag>Application</tag>
