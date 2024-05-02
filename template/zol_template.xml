@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>6.0</version>
-    <date>2024-04-14T08:31:03Z</date>
+    <date>2024-05-02T18:35:25Z</date>
     <groups>
         <group>
             <uuid>7df96b18c230490a9a0a9e2307226338</uuid>
@@ -455,6 +455,20 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                         </tag>
                     </tags>
                 </item>
+                <item>
+                    <uuid>194b7c100d124710ac6ec994c154ab36</uuid>
+                    <name>ZFS Uptime</name>
+                    <key>zfs.uptime</key>
+                    <value_type>FLOAT</value_type>
+                    <units>seconds</units>
+                    <description>Needed for iostats</description>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>ZFS</value>
+                        </tag>
+                    </tags>
+                </item>
             </items>
             <discovery_rules>
                 <discovery_rule>
@@ -747,10 +761,26 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             </trigger_prototypes>
                         </item_prototype>
                         <item_prototype>
-                            <uuid>3207e6ffd0fa40c4a1d6e607e4e12375</uuid>
+                            <uuid>7c8c97e5e76a4ea3ba41613f1eee4daf</uuid>
                             <name>Zpool {#POOLNAME} read throughput</name>
-                            <type>DEPENDENT</type>
+                            <type>CALCULATED</type>
                             <key>zfs.zpool.iostat.nread[{#POOLNAME}]</key>
+                            <units>Bps</units>
+                            <params>round(last(//zfs.zpool.iostat.nread_avg[{#POOLNAME}])*last(//zfs.uptime),0)</params>
+                            <preprocessing>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <parameters>
+                                        <parameter/>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>3207e6ffd0fa40c4a1d6e607e4e12375</uuid>
+                            <name>Zpool {#POOLNAME} AVG since boot read throughput</name>
+                            <type>DEPENDENT</type>
+                            <key>zfs.zpool.iostat.nread_avg[{#POOLNAME}]</key>
                             <delay>0</delay>
                             <history>30d</history>
                             <units>Bps</units>
@@ -777,10 +807,26 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             </tags>
                         </item_prototype>
                         <item_prototype>
-                            <uuid>78b418605f9b45b29bbd33b93a6b2e82</uuid>
+                            <uuid>e7567b2eacd04b8c9602e30d1245c318</uuid>
                             <name>Zpool {#POOLNAME} write throughput</name>
-                            <type>DEPENDENT</type>
+                            <type>CALCULATED</type>
                             <key>zfs.zpool.iostat.nwritten[{#POOLNAME}]</key>
+                            <units>Bps</units>
+                            <params>round(last(//zfs.zpool.iostat.nwritten_avg[{#POOLNAME}])*last(//zfs.uptime),0)</params>
+                            <preprocessing>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <parameters>
+                                        <parameter/>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>78b418605f9b45b29bbd33b93a6b2e82</uuid>
+                            <name>Zpool {#POOLNAME} AVG since boot write throughput</name>
+                            <type>DEPENDENT</type>
+                            <key>zfs.zpool.iostat.nwritten_avg[{#POOLNAME}]</key>
                             <delay>0</delay>
                             <history>30d</history>
                             <units>Bps</units>
@@ -807,10 +853,26 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             </tags>
                         </item_prototype>
                         <item_prototype>
-                            <uuid>6b35bf06bf4542318a7999ac4d7952f7</uuid>
+                            <uuid>2be4764e02bf4b518850f1a46abc07e6</uuid>
                             <name>Zpool {#POOLNAME} IOPS: reads</name>
-                            <type>DEPENDENT</type>
+                            <type>CALCULATED</type>
                             <key>zfs.zpool.iostat.reads[{#POOLNAME}]</key>
+                            <units>iops</units>
+                            <params>round(last(//zfs.zpool.iostat.reads_avg[{#POOLNAME}])*last(//zfs.uptime),0)</params>
+                            <preprocessing>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <parameters>
+                                        <parameter/>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>6b35bf06bf4542318a7999ac4d7952f7</uuid>
+                            <name>Zpool {#POOLNAME} IOPS AVG since boot: reads</name>
+                            <type>DEPENDENT</type>
+                            <key>zfs.zpool.iostat.reads_avg[{#POOLNAME}]</key>
                             <delay>0</delay>
                             <history>30d</history>
                             <units>iops</units>
@@ -837,10 +899,26 @@ Home of the project: https://github.com/Cosium/zabbix_zfs-on-linux</description>
                             </tags>
                         </item_prototype>
                         <item_prototype>
-                            <uuid>b99d5ab922324536bc2e013ac1fca306</uuid>
+                            <uuid>ba9be67e02ea41aead4cb3474b606369</uuid>
                             <name>Zpool {#POOLNAME} IOPS: writes</name>
-                            <type>DEPENDENT</type>
+                            <type>CALCULATED</type>
                             <key>zfs.zpool.iostat.writes[{#POOLNAME}]</key>
+                            <units>iops</units>
+                            <params>round(last(//zfs.zpool.iostat.writes_avg[{#POOLNAME}])*last(//zfs.uptime),0)</params>
+                            <preprocessing>
+                                <step>
+                                    <type>CHANGE_PER_SECOND</type>
+                                    <parameters>
+                                        <parameter/>
+                                    </parameters>
+                                </step>
+                            </preprocessing>
+                        </item_prototype>
+                        <item_prototype>
+                            <uuid>b99d5ab922324536bc2e013ac1fca306</uuid>
+                            <name>Zpool {#POOLNAME} IOPS AVG since boot: writes</name>
+                            <type>DEPENDENT</type>
+                            <key>zfs.zpool.iostat.writes_avg[{#POOLNAME}]</key>
                             <delay>0</delay>
                             <history>30d</history>
                             <units>iops</units>
@@ -980,7 +1058,7 @@ This is not a bad thing itself, but it slows down the entire pool and should be 
                                     <color>5C6BC0</color>
                                     <item>
                                         <host>ZFS on Linux</host>
-                                        <key>zfs.zpool.iostat.reads[{#POOLNAME}]</key>
+                                        <key>zfs.zpool.iostat.reads_avg[{#POOLNAME}]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -988,7 +1066,7 @@ This is not a bad thing itself, but it slows down the entire pool and should be 
                                     <color>EF5350</color>
                                     <item>
                                         <host>ZFS on Linux</host>
-                                        <key>zfs.zpool.iostat.writes[{#POOLNAME}]</key>
+                                        <key>zfs.zpool.iostat.writes_avg[{#POOLNAME}]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
@@ -1026,7 +1104,7 @@ This is not a bad thing itself, but it slows down the entire pool and should be 
                                     <color>5C6BC0</color>
                                     <item>
                                         <host>ZFS on Linux</host>
-                                        <key>zfs.zpool.iostat.nread[{#POOLNAME}]</key>
+                                        <key>zfs.zpool.iostat.nread_avg[{#POOLNAME}]</key>
                                     </item>
                                 </graph_item>
                                 <graph_item>
@@ -1035,7 +1113,7 @@ This is not a bad thing itself, but it slows down the entire pool and should be 
                                     <color>EF5350</color>
                                     <item>
                                         <host>ZFS on Linux</host>
-                                        <key>zfs.zpool.iostat.nwritten[{#POOLNAME}]</key>
+                                        <key>zfs.zpool.iostat.nwritten_avg[{#POOLNAME}]</key>
                                     </item>
                                 </graph_item>
                             </graph_items>
